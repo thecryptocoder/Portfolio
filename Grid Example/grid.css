@@ -1,0 +1,230 @@
+/******************************************************
+Clear all default padding:
+******************************************************/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/******************************************************
+Basic Stuff:
+******************************************************/
+
+body {
+  color: #000;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url("https://images.freecreatives.com/wp-content/uploads/2016/02/Free-Vector-Black-Pattern.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+a {
+    color: rgb(67, 64, 255);
+}
+
+p {
+    margin-bottom: 1em;
+}
+
+/******************************************************
+Grid Wrapper that shows as a transparent layer:
+******************************************************/
+
+.wrapper {
+    display: grid;
+    grid-gap: 5px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, .15);
+}
+
+/******************************************************
+Grid containing the header elements (logo, ad, & menu):
+******************************************************/
+
+.headerGrid {
+    margin: 0px 5px 0px 0px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template: 90px auto / 39.333334% 60.666666%;
+    grid-template-areas: 
+        "title ads"
+        "menu menu";
+}
+
+.titleLogo {
+    grid-area: title;
+    background-color: rgb(0, 0, 0);
+    max-height: 90px;
+    line-height: .25;
+    font-size: 14px;
+    text-align: center;
+    border: solid 2px rgb(71, 100, 76);
+    transition-duration: 1000ms;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(.25, .5, .75, 1);
+}
+
+.titleLogo:hover {
+    background-color: rgb(236, 0, 140);
+}
+
+.titleLogo img {
+    width: 100%;
+    height: 100%;
+}
+
+.topAD {
+    grid-area: ads;
+    max-width: 728px;
+    max-height: 90px;
+}
+
+.banner {
+    width: 100%;
+    height: 100%;
+}
+
+.menuGrid {
+    grid-area: menu;
+    background-color: rgb(93, 182, 255);
+}
+
+.menuLinks {
+    display: grid;
+    grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.menuLinks div {
+    text-align: center;
+    padding: 10px;
+    border: solid 1px rgb(97, 131, 167);
+    transition-duration: 300ms;
+    transition-property: background-color;
+    transition-timing-function: cubic-bezier(.25, .5, .75, 1);
+}
+
+.menuLinks div:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+.menuLinks div:active {
+    background-color: rgb(0, 255, 42);
+}
+
+/******************************************************
+Grid containing the content area:
+******************************************************/
+
+.contentGrid {
+    margin: 0px 5px 0px 0px;
+    display: grid;
+    grid-gap: 5px;
+    grid-template: auto / 75% 25%;
+    grid-template-areas: 
+        "cnt side"
+        "ftr ftr";
+}
+
+.contentArea {
+    padding: 15px;
+}
+
+.contentArea {
+    background-color: rgb(255, 255, 255);
+    grid-area: cnt;
+}
+
+/******************************************************
+Image wrapper, caption & image styling:
+******************************************************/
+
+.postImageWrapper {
+    float: left;
+    display: grid;
+    grid-template: 1fr / 1fr;
+    max-width: 200px;
+    padding: 5px;
+    margin: 5px 15px 5px 0px;
+    background-color: rgb(214, 214, 214);
+}
+
+.postImage {
+    width: 100%;
+    float: left;
+}
+
+figcaption {
+    float: left;
+    justify-self: center;
+}
+
+/******************************************************
+Sidebar - Ad image & recent posts grid:
+******************************************************/
+
+.sidebar {
+    grid-area: side;
+}
+
+.sideAD {
+    width: 100%;
+    height: auto;
+}
+
+.sideIMG {
+    width: 100%;
+    height: auto;
+}
+
+.recentPostsGrid {
+    display: grid;
+    grid-template: auto / 1fr;
+    grid-gap: 5px;
+    max-width: 300px;
+}
+
+.recentPostsGrid div {
+    background-color: rgb(255, 255, 255);
+    padding: 5px;
+    border: solid 2px rgba(150, 150, 150, 1);
+    transition-property: border;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(.25, .5, .75, 1);
+}
+
+.recentPostsGrid div:hover {
+    border: solid 2px rgba(0, 255, 0, 0.5);
+}
+
+.recentPostsGrid div:active {
+    border: solid 2px rgb(0, 255, 0);
+    background-color: rgb(0, 255, 0);
+}
+
+.recentPostsGrid p {
+    font-size: 12px;
+}
+
+/******************************************************
+Footer grid:
+******************************************************/
+
+.footerGrid {
+    display: grid;
+    grid-template: auto / repeat(auto-fit, minmax(300px, 1fr));
+    color: white;
+    text-align: center;
+    background-color: black;
+    grid-area: ftr;
+}
+
+.footerGrid div {
+    background-color: rgba(35, 35, 35, 0.75);
+    padding: 15px;
+    border: solid 2px black;
+}
