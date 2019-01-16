@@ -4,7 +4,7 @@
 function myIfElseFunction() {
 
     let gradeOne = document.getElementById("gradeOne").value;
-    let responseOne = document.getElementById("response1");
+    let responseOne = document.getElementById("responseOne");
     
     if (gradeOne === "A") {
         responseOne.innerHTML = "Impressive! You Got An &quot;A&quot;! I'm So Proud Of You!";
@@ -26,7 +26,7 @@ function myIfElseFunction() {
 function mySwitchFunction() {
 
     let gradeTwo = document.getElementById("gradeTwo").value;
-    let responseTwo = document.getElementById("response2");
+    let responseTwo = document.getElementById("responseTwo");
 
     switch (gradeTwo) {
         case "A":
@@ -56,7 +56,7 @@ function mySwitchFunction() {
 function myTernaryFunction() {
 
     let gradeThree = document.getElementById("gradeThree").value;
-    let responseThree = document.getElementById("response3");
+    let responseThree = document.getElementById("responseThree");
 
     gradeThree === "A" ? responseThree.innerHTML = "Impressive! You Got An &quot;A&quot;! I'm So Proud Of You!" :
     gradeThree === "B" ? responseThree.innerHTML = "A &quot;" + gradeThree + "&quot; Is Good... But Try Harder For An &quot;A&quot;!" :
