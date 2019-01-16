@@ -43,7 +43,8 @@
         
         function myIfElseFunction() {<br><br>
 
-            let gradeOne = document.getElementById("gradeOne").value;<br><br>
+            let gradeOne = document.getElementById("gradeOne").value;<br>
+            let responseOne = document.getElementById("responseOne");<br><br>
             
             if (gradeOne === "A") {<br>
                 &emsp;&emsp;responseOne.innerHTML = "Impressive! You Got An &amp;quot;A&amp;quot;! I'm So Proud Of You!";<br>
@@ -96,8 +97,9 @@
 
                 function mySwitchFunction() {<br><br>
 
-                    let gradeTwo = document.getElementById("gradeTwo").value;<br><br>
-                
+                    let gradeTwo = document.getElementById("gradeTwo").value;<br>
+                    let responseTwo = document.getElementById("responseTwo");<br><br>
+
                     switch (gradeTwo) {<br>
                         &emsp;case "A":<br>
                         &emsp;&emsp;responseTwo.innerHTML = "Impressive! You Got An &amp;quot;A&amp;quot;! I'm So Proud Of You!";<br>
@@ -156,7 +158,7 @@
                 function myTernaryFunction() {<br><br>
 
                     &emsp;let gradeThree = document.getElementById("gradeThree").value;<br>
-                    &emsp;let responseThree = document.getElementById("response3");<br><br>
+                    &emsp;let responseThree = document.getElementById("responseThree");<br><br>
                 
                     &emsp;gradeThree === "A" ? responseThree.innerHTML = "Impressive! You Got An &amp;quot;A&amp;quot;! I'm So Proud Of You!" :<br>
                     &emsp;gradeThree === "B" ? responseThree.innerHTML = "A &amp;quot;" + gradeThree + "&amp;quot; Is Good... But Try Harder For An &amp;quot;A&amp;quot;!" :<br>
