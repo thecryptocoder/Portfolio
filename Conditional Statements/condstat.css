@@ -1,0 +1,14 @@
+blockquote {
+    display: inline-block;
+    background-color: #eeeeee;
+    padding: 10px;
+    border: solid 1px rgb(150, 150, 150);
+    font-family: 'Inconsolata', monospace;
+}
+
+.selectorPanel {
+    display: inline-block;
+    background-color: #eeeeee;
+    padding: 10px;
+    border: solid 1px rgb(150, 150, 150);
+}

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="condstat.css">
+    <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <script src="condstat.js"></script>
+    <title>JavaScript Conditional Statement Examples</title>
+</head>
+<body>
+
+    <h1>JavaScript Conditional Statement Examples</h1>
+    <p>This page contains 3 types of conditional statements that I learned in JavaScript. Each example poses a different way to code the same output based on the selected answer.</p>
+
+    <h1>If/Else Statement:</h1>
+
+    <div class="selectorPanel">
+
+        <h3>What Grade Did You Get In Math?</h3>
+
+        <select name="userGradeOne" id="gradeOne">
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="F">F</option>
+            <option value="Error Test">Error Test</option>
+        </select>
+        
+        <button onclick="myIfElseFunction()">Call myIfElseFunction()</button>
+        
+        <p id="response1">Tell the truth...</p>
+
+    </div>
+
+    <h3>The JavaScript For This Example:</h3>
+
+    <p class="pCode">
+
+        <blockquote>
+        
+        function myIfElseFunction() {<br><br>
+
+            let gradeOne = document.getElementById("gradeOne").value;<br><br>
+            
+            if (gradeOne === "A") {<br>
+                &emsp;&emsp;responseOne.innerHTML = "Impressive! You Got An &amp;quot;A&amp;quot;! I'm So Proud Of You!";<br>
+                &emsp;} else if (gradeOne === "B") {<br>
+                &emsp;&emsp;responseOne.innerHTML = "A &amp;quot;" + gradeOne + "&amp;quot; Is Good... But Try Harder For An &amp;quot;A&amp;quot;!";<br>
+                &emsp;} else if (gradeOne === "C") {<br>
+                &emsp;&emsp;responseOne.innerHTML = "Ok, You Passed... But You Can Do Better Than That!";<br>
+                &emsp;} else if (gradeOne === "D") {<br>
+                &emsp;&emsp;responseOne.innerHTML = "It's Time To Have A Talk...";<br>
+                &emsp;} else if (gradeOne === "F") {<br>
+                &emsp;&emsp;responseOne.innerHTML = "Getting An &amp;quot;" + gradeOne + "&amp;quot; Is Unacceptable! You're Grounded!";<br>
+                &emsp;} else {<br>
+                &emsp;&emsp;responseOne.innerHTML = "ERROR";<br>
+                &emsp;};<br>
+        };
+
+        </blockquote>
+
+    </p>
+    
+
+    <hr>
+
+    <h1>Switch Statement:</h1>
+
+    <div class="selectorPanel">
+
+        <h3>What Grade Did You Get In Math?</h3>
+
+        <select name="userGrade2" id="gradeTwo">
+           <option value="A">A</option>
+           <option value="B">B</option>
+           <option value="C">C</option>
+           <option value="D">D</option>
+           <option value="F">F</option>
+           <option value="Error Test">Error Test</option>
+        </select>
+
+        <button onclick="mySwitchFunction()">Call mySwitchFunction()</button>
+
+        <p id="response2">Tell the truth...</p>
+
+    </div>
+
+    <h3>The JavaScript For This Example:</h3>
+
+    <p class="pCode">
+        
+        <blockquote>
+
+                function mySwitchFunction() {<br><br>
+
+                    let gradeTwo = document.getElementById("gradeTwo").value;<br><br>
+                
+                    switch (gradeTwo) {<br>
+                        &emsp;case "A":<br>
+                        &emsp;&emsp;responseTwo.innerHTML = "Impressive! You Got An &amp;quot;A&amp;quot;! I'm So Proud Of You!";<br>
+                        &emsp;break;<br>
+                        &emsp;case "B":<br>
+                        &emsp;&emsp;responseTwo.innerHTML = "A &amp;quot;" + gradeTwo + "&amp;quot; Is Good... But Try Harder For An &amp;quot;A&amp;quot;!";<br>
+                        &emsp;break;<br>
+                        &emsp;case "C":<br>
+                        &emsp;&emsp;responseTwo.innerHTML = "Ok, You Passed... But You Can Do Better Than That!";<br>
+                        &emsp;break;<br>
+                        &emsp;case "D":<br>
+                        &emsp;&emsp;responseTwo.innerHTML = "It's Time To Have A Talk...";<br>
+                        &emsp;break;<br>
+                        &emsp;case "F":<br>
+                        &emsp;&emsp;responseTwo.innerHTML = "Getting An &amp;quot;" + gradeTwo + "&amp;quot; Is Unacceptable! You're Grounded!";<br>
+                        &emsp;break;<br>
+                        &emsp;default:<br>
+                        &emsp;&emsp;responseTwo.innerHTML = "ERROR";<br>
+                        &emsp;break;<br>
+                        &emsp;};<br>
+                };
+
+        </blockquote>
+
+    </p>
+
+    <hr>
+
+    <h1>Ternary Operator Statement:</h1>
+
+    <div class="selectorPanel">
+
+        <h3>What Grade Did You Get In Math?</h3>
+
+        <select name="userGrade3" id="gradeThree">
+           <option value="A">A</option>
+           <option value="B">B</option>
+           <option value="C">C</option>
+           <option value="D">D</option>
+           <option value="F">F</option>
+           <option value="Error Test">Error Test</option>
+        </select>
+
+        <button onclick="myTernaryFunction()">Call myTernaryFunction()</button>
+
+        <p id="response3">Tell the truth...</p>
+    
+    </div>
+
+    <h3>The JavaScript For This Example:</h3>
+
+    <p class="pCode">
+        
+        <blockquote>
+
+                function myTernaryFunction() {<br><br>
+
+                    &emsp;let gradeThree = document.getElementById("gradeThree").value;<br>
+                    &emsp;let responseThree = document.getElementById("response3");<br><br>
+                
+                    &emsp;gradeThree === "A" ? responseThree.innerHTML = "Impressive! You Got An &amp;quot;A&amp;quot;! I'm So Proud Of You!" :<br>
+                    &emsp;gradeThree === "B" ? responseThree.innerHTML = "A &amp;quot;" + gradeThree + "&amp;quot; Is Good... But Try Harder For An &amp;quot;A&amp;quot;!" :<br>
+                    &emsp;gradeThree === "C" ? responseThree.innerHTML = "Ok, You Passed... But You Can Do Better Than That!" :<br>
+                    &emsp;gradeThree === "D" ? responseThree.innerHTML = "It's Time To Have A Talk..." :<br>
+                    &emsp;gradeThree === "F" ? responseThree.innerHTML = "Getting An &amp;quot;" + gradeThree + "&amp;quot; Is Unacceptable! You're Grounded!" :<br>
+                    &emsp;responseThree.innerHTML = "ERROR";<br><br>
+                
+                };
+
+        </blockquote>
+
+    </p>
+
+</body>
+</html>
