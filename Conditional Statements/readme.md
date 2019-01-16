@@ -4,3 +4,4 @@ There are three identical questions with identical answers and identical respons
 
 The first one uses an 'if/else' statement. The second uses a switch statement, and the third uses a ternary operator.
 
+The code for each section is displayed on-page for easy reference.
